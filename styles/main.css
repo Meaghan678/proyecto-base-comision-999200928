@@ -16,3 +16,14 @@
     --green-100: #dcf8c6;
     --primary-font: "Roboto", sans-serif;
 }
+
+body{
+    background-color: var(--primary-color);
+    padding: 40px;
+}
+
+.app{
+    background-color: antiquewhite;
+    display: grid;
+    grid-template-columns: 320px 1fr;
+}
