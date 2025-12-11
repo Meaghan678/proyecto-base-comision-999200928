@@ -26,4 +26,19 @@ body{
     background-color: antiquewhite;
     display: grid;
     grid-template-columns: 320px 1fr;
+    height: 100vh;
+}
+
+aside{
+    background-color: var(--grey-900);
+    color: white;
+}
+
+aside header{
+    background-color: greenyellow;
+}
+
+.profile img{
+    width: 80px;
+    border-radius: 50%;
 }
