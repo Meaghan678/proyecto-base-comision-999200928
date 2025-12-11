@@ -36,9 +36,33 @@ aside{
 
 aside header{
     background-color: greenyellow;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile{
+    display: flex;
+    align-items: center;
 }
 
 .profile img{
     width: 80px;
     border-radius: 50%;
+}
+
+.actions{
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+}
+
+.actions button{
+    width: 30px;
+    height: 30px;
+}
+
+.actions button svg{
+    width: 30px;
 }
