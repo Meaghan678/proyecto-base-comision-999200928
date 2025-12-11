@@ -70,6 +70,7 @@ aside header{
    border-radius: 8px;
    cursor: pointer;
    background-color: var(--grey-800);
+   transition: transform .2s;
 }
 
 .actions button svg{
@@ -78,4 +79,5 @@ aside header{
 
 .actions button:hover{
     background-color: var(--grey-700);
+    transform: translateY(-4px);
 }
