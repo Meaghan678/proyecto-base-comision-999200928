@@ -9,8 +9,8 @@
   --primary-color: #0a9c6f;
   --grey-900: #0d1919;
   --grey-800: #121b22;
-  --grey-600: #1f2c34;
-  --grey-700: #9f9fa1;
+  --grey-700: #1f2c34;
+  --grey-600: #9f9fa1;
   --grey-500: #dfdfe1;
   --grey-300: #fefff6;
   --grey-200: #f1f2f6;
@@ -162,4 +162,9 @@ aside header{
     width: 55px;
     border-radius: 50%;
     margin: 12px;
+}
+
+.user-header p{
+    color: var(--grey-600);
+    font-size: 14px;
 }
