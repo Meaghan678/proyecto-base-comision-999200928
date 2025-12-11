@@ -107,3 +107,29 @@ aside header{
     outline: 1px solid #4a4848;
 }
 
+/* chats */
+
+.chats{
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.user-chat{
+    background-color: var(--grey-900);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.user-chat img{
+    border-radius: 50%;
+    width: 60px;
+}
+
+.user-chat:hover{
+    background-color: var(--grey-700);
+    cursor: pointer;
+    border-left: 3px solid var(--green-300);
+}
