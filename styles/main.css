@@ -146,7 +146,8 @@ aside header{
 
 .user-chat img{
     border-radius: 50%;
-    width: 60px;
+    width: 55px;
+    height: 55px;
 }
 
 .user-chat:hover{
@@ -169,6 +170,7 @@ aside header{
     width: 55px;
     border-radius: 50%;
     margin: 12px;
+    height: 55px;
 }
 
 .user-header p{
