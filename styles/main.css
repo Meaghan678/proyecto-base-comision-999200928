@@ -27,7 +27,7 @@ body{
 }
 
 .app{
-    background-color: antiquewhite;
+    background-color:white;
     display: grid;
     grid-template-columns: 320px 1fr;
     height: 100vh;
@@ -151,11 +151,13 @@ aside header{
 }
 
 /* header chat-panel */
+
 .user-header{
     background-color: var(--grey-300);
     display: flex;
     justify-content: left;
     align-items: center;
+    border-bottom: 1px solid var(--grey-600);
 }
 
 .user-header img{
@@ -168,3 +170,5 @@ aside header{
     color: var(--grey-600);
     font-size: 14px;
 }
+
+/* messages */
