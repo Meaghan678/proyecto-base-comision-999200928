@@ -186,6 +186,7 @@ aside header{
 }
 
 .messages{
+    background-image: url(../assets/fondo-2.jpg);
     padding: 20px;
     flex: 1;
     display: flex;
