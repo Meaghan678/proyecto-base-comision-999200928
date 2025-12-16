@@ -134,6 +134,7 @@ aside header{
     display: flex;
     flex-direction: column;
     gap: 13px;
+    padding: 10px;
 }
 
 .user-chat{
@@ -146,8 +147,8 @@ aside header{
 
 .user-chat img{
     border-radius: 50%;
-    width: 55px;
-    height: 55px;
+    width: 45px;
+    height: 45px;
 }
 
 .user-chat:hover{
