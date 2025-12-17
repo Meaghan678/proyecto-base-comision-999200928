@@ -20,7 +20,6 @@
   --primary-font: "Roboto", sans-serif;
 }
 
-
 body{
     background-color: var(--primary-color);
     padding: 40px;
@@ -30,7 +29,7 @@ body{
     background-color:white;
     display: grid;
     grid-template-columns: 320px 1fr;
-    height: 100vh;
+    height: 95vh;
     overflow: hidden;
     margin: auto;
     border-radius: 20px;
@@ -231,7 +230,7 @@ footer{
     gap: 13px;
 }
 
-footer button{
+footer form button{
     width: 25px;
     height: 25px;
     padding: 3px;
@@ -257,6 +256,7 @@ footer form{
     flex: 1;
     display: flex;
     align-items: center;
+    gap: 10px;
 }
 
 footer form textarea{

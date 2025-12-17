@@ -17,17 +17,20 @@ Este proyecto se centra en el desarrollo visual de una interfaz de chat similar 
   --green-100: #dcf8c6;
 
 ## Estructura del proyecto
+```
 /index.html
 /styles/
 └── main.css
 /assets/
-├── foto-perfil 
-└── foto-perfil-1 
-└── foto-perfil-2
-└── foto-perfil-3
-└── foto-perfil-4
-└── foto-perfil-5
-└── fondo-2
+├── foto-perfil
+├── foto-perfil-1
+├── foto-perfil-2
+├── foto-perfil-3
+├── foto-perfil-4
+├── foto-perfil-5
+├── fondo-2
+└── IconoIrWhatsappSolid
+```
 
 ## Cómo visualizar el proyecto
 Se debe abrir el archivo "index.html" en cualquier navegador web.
@@ -38,6 +41,6 @@ Con las propiedades top y left se ajustó la ubicación del ícono para centrarl
 2. Incorporación de imágenes tanto para los perfiles de los usuarios como para el fondo del panel de chat, para mejorar la apariencia visual.
 3. Se agregaron bordes en la parte superior e inferiro de la barra de búsqueda.
 4. Inclusión ícono whatsapp.
- 
+
 
 
