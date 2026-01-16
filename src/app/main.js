@@ -30,8 +30,27 @@ const chatsData = [
     }
 ]
 
+const renderChats = (list) => {
+    $listChat.innerHTML = ""
+
+    list.forEach((chat) => {
+        $listChat.innerHTML += `
+        <div class="user-chat">
+            <img src="${chat.avatar}"  alt="foto de perfil de maria">
+            <div>
+                <h3>${chat.name}</h3>
+                <p>${chat.lastMessage}</p>
+            </div>
+        </div>
+        `
+    });
+}
+
 const searchUsers = () => {
-    const UserName = $search.value
+    const UserName = $search.value.toLowerCase()
+    const filteredChats = chatsData.filter((user) => user.name.toLowerCase().includes(UserName))
+    renderChats(filteredChats)
 }
 
 $search.addEventListener("input",searchUsers)
+renderChats(chatsData)
