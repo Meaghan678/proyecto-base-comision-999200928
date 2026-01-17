@@ -1,6 +1,7 @@
 const $search = document.getElementById("search")
 const $listChat = document.querySelector(".chats")
 const $chats = document.querySelectorAll(".user-chat")
+const $loader = document.querySelector(".loader")
 
 const chatsData = [
     {
@@ -47,10 +48,13 @@ const renderChats = (list) => {
 }
 
 const searchUsers = () => {
-    const userName = $search.value.toLowerCase().replace(/[aáeéiíoóuú]/gi,'')
+    const userName = $search.value.toLowerCase().replace(/[áéíóú]/gi,'a','e','i','o','u')
 
-    const filteredChats = chatsData.filter((user) => user.name.toLowerCase().replace(/[aáeéiíoóuú]/gi,'').includes(userName))
+    const filteredChats = chatsData.filter((user) => user.name.toLowerCase().replace(/[áéíóú]/gi,'a','e','i','o','u').includes(userName))
     renderChats(filteredChats)
+
+    
+
 }
 
 $search.addEventListener("input",searchUsers)

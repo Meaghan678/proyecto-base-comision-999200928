@@ -136,6 +136,27 @@ aside header{
     padding: 10px;
 }
 
+.loader{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+#hourglass{
+    width: 30px;
+    animation: girar 2s infinite linear;
+}
+
+@keyframes girar{
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
 .user-chat{
     background-color: var(--grey-900);
     display: flex;
