@@ -1,7 +1,7 @@
 const $search = document.getElementById("search")
 const $listChat = document.querySelector(".chats")
 const $chats = document.querySelectorAll(".user-chat")
-const $loader = document.querySelector(".loader")
+const $noChats = document.querySelector(".noChats")
 
 const chatsData = [
     {
@@ -48,12 +48,18 @@ const renderChats = (list) => {
 }
 
 const searchUsers = () => {
-    const userName = $search.value.toLowerCase().replace(/[áéíóú]/gi,'a','e','i','o','u')
+        const userName = $search.value.toLowerCase().replace(/[áéíóú]/gi,'a','e','i','o','u')
 
-    const filteredChats = chatsData.filter((user) => user.name.toLowerCase().replace(/[áéíóú]/gi,'a','e','i','o','u').includes(userName))
-    renderChats(filteredChats)
+        const filteredChats = chatsData.filter((user) => user.name.toLowerCase().replace(/[áéíóú]/gi,'a','e','i','o','u').includes(userName))
 
-    
+        const valid = filteredChats.length === 0
+        if(valid){
+            $noChats.style.display = "flex"
+            $listChat.innerHTML = ""
+        }else{
+            $noChats.style.display = "none"
+            renderChats(filteredChats)
+        }
 
 }
 
