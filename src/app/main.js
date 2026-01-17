@@ -1,4 +1,4 @@
-const $search = document.querySelector("search")
+const $search = document.getElementById("search")
 const $listChat = document.querySelector(".chats")
 const $chats = document.querySelectorAll(".user-chat")
 
@@ -19,7 +19,7 @@ const chatsData = [
         avatar: "./src/assets/foto-perfil-2.webp"
     },
     {
-        name: "Hernan",
+        name: "Papá",
         lastMessage: "Suerteeee!!!!",
         avatar: "./src/assets/foto-perfil-5.jpg"
     },
