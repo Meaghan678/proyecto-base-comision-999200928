@@ -136,20 +136,6 @@ aside header{
     padding: 10px;
 }
 
- .noChats{
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    text-align: center;
-} 
-
-#noResults{
-    font-size: 14px;
-    color: var(--grey-600);
-}
-
 .user-chat{
     background-color: var(--grey-900);
     display: flex;
@@ -168,6 +154,42 @@ aside header{
     background-color: var(--grey-700);
     cursor: pointer;
     border-left: 3px solid var(--green-300);
+}
+
+.loader{ 
+    display: none; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+} 
+
+#hourglass{  
+    width: 30px; 
+    animation: girar 2s infinite linear; 
+}
+
+@keyframes girar{
+    0%{
+        transform:rotate(0deg) ;
+    }
+
+    100%{
+        transform:rotate(360deg) ;
+    }
+}
+
+.noChats{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+} 
+
+#noResults{
+    font-size: 14px;
+    color: var(--grey-600);
 }
 
 /* header chat-panel */
