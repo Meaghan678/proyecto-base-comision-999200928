@@ -47,8 +47,9 @@ const renderChats = (list) => {
 }
 
 const searchUsers = () => {
-    const UserName = $search.value.toLowerCase()
-    const filteredChats = chatsData.filter((user) => user.name.toLowerCase().includes(UserName))
+    const userName = $search.value.toLowerCase().replace(/[aáeéiíoóuú]/gi,'')
+
+    const filteredChats = chatsData.filter((user) => user.name.toLowerCase().replace(/[aáeéiíoóuú]/gi,'').includes(userName))
     renderChats(filteredChats)
 }
 
