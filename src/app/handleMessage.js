@@ -1,3 +1,8 @@
+//<div class="message you">
+               // <p class="message-content">Hola! ¿Querés venir por un cafe?</p>
+               // <p class="hour">14:12</p>
+            //</div>
+
 const messages = [{
     id: 1,
     text: "Hola! ¿Querés venir por un cafe?",
