@@ -1,7 +1,4 @@
-//<div class="message you">
-               // <p class="message-content">Hola! ¿Querés venir por un cafe?</p>
-               // <p class="hour">14:12</p>
-            //</div>
+const $listMessages = document.querySelector(".messages")
 
 const messages = [{
     id: 1,
@@ -22,3 +19,18 @@ const messages = [{
     me: false
 }
 ]
+
+const renderMessages = (list) => {
+    $listMessages.innerHTML = ""
+
+    list.forEach((message) => {
+        $listMessages.innerHTML += `
+            <div class="message ${message.me ? 'me' : 'you'}">
+                <p class="message-content">${message.text}</p>
+                <p class="hour">${message.hour}</p>
+            </div>
+        `
+    });
+}
+
+renderMessages(messages)
