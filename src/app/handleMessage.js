@@ -1,4 +1,6 @@
 const $listMessages = document.querySelector(".messages")
+const $replyMessage = document.getElementById("reply")
+const $formMessage = document.querySelector("formMessage")
 
 const messages = [{
     id: 1,
@@ -32,5 +34,25 @@ const renderMessages = (list) => {
         `
     });
 }
+
+const sendMessage = (e) => {
+    const today = new Date()
+
+    if(e.key === "Enter" && !e.shiftKey){
+        e.preventDefault()
+        const newMessage = {
+            text: $replyMessage.value,
+            hour: today.getHours() + ":" + today.getMinutes(),
+            me: true
+        }
+
+        console.log(newMessage)
+    }
+}
+
+// $formMessage.addEventListener("submit",sendMessage)
+$replyMessage.addEventListener("keydown", (e) => {
+    sendMessage(e)
+} )
 
 renderMessages(messages)
