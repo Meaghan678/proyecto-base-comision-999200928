@@ -1,8 +1,8 @@
 const $listMessages = document.querySelector(".messages")
 const $replyMessage = document.getElementById("reply")
-const $formMessage = document.querySelector("formMessage")
+const $formMessage = document.getElementById("formMessage")
 
-const messages = [{
+let messages = [{
     id: 1,
     text: "Hola! ¿Querés venir por un cafe?",
     hour: "14:12",
@@ -21,6 +21,18 @@ const messages = [{
     me: false
 }
 ]
+
+const loadChats = () => {
+  const data = JSON.parse(localStorage.getItem("messages"))
+  if(data === null){
+    return []
+  }
+  return data
+}
+
+const saveChats = (list) => {
+    localStorage.setItem("messages",JSON.stringify(list))
+}
 
 const renderMessages = (list) => {
     $listMessages.innerHTML = ""
@@ -45,8 +57,14 @@ const sendMessage = (e) => {
             hour: today.getHours() + ":" + today.getMinutes(),
             me: true
         }
+        // messages.push(newMessage)
+        const messagesInLs = loadChats()
+        messages = [...messagesInLs, newMessage]
 
-        console.log(newMessage)
+        saveChats(messages)
+        renderMessages(messages)
+
+        $formMessage.reset()
     }
 }
 
@@ -55,4 +73,5 @@ $replyMessage.addEventListener("keydown", (e) => {
     sendMessage(e)
 } )
 
-renderMessages(messages)
+const initialMessages = loadChats()
+renderMessages(initialMessages)
